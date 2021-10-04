@@ -8,20 +8,20 @@ public class Room
       private int shadeAmount;
       private double coolingCapacity;
       
-      //No arg constructor
+   //No arg constructor
       public Room ()
       {
          
       }
       
-      /**
-      Constructor that accepts arguments
-      @param nam The room name
-      @param roLength The room length
-      @param roWidth The room width
-      @param shaAmount The amount of shade
-      @param coolCap The cooling capacity
-      */
+   /**
+   Constructor that accepts arguments
+   @param nam The room name
+   @param roLength The room length
+   @param roWidth The room width
+   @param shaAmount The amount of shade
+   @param coolCap The cooling capacity
+   */
       
       public Room (String nam, double roLength, double roWidth, int shaAmount, double coolCap)
       {
@@ -32,63 +32,75 @@ public class Room
          coolingCapacity = coolCap;
       }
       
-         //Mutator/ Setter methods for fields
+   //Mutator/ Setter methods for fields
+      //@param nam The name
       public void setName (String nam)
       {
          name = nam;
       }
       
+      //@param roLength The room length
       public void setRoomLength( double roLength)
       {
          roomLength = roLength;
       }
       
+      //@param roWidth The room width
       public void setRoomWidth( double roWidth)
       {
          roomWidth = roWidth;
       }
       
+      //@param shaAmount The shade amount
       public void setShadeAmount( int shaAmount)
       {
          shadeAmount = shaAmount;
       }
-
+      
+      //@param coolCap The cooling capacity
       public void setCoolingCapacity( double coolCap)
       {
          coolingCapacity = coolCap;
       }
                   
    //Accessor/ Getter methods
+      //@return The name of the bedroom
       public String getName()
       {
          return name;
       }
       
+      //@return The length of the bedroom
       public double getRoomLength()
       {
           return roomLength;
       }
       
+      //@return The width of the bedroom
       public double getRoomWidth()
       {
          return roomWidth;
       }
       
+      //@return The shade amount of the bedroom
       public int getShadeAmount()
       {
           return shadeAmount;
       }
       
+      //@return The cooling capacity
       public double getCoolingCapacity()
       {
          return coolingCapacity;
       }
       
+      //@return The area of the bedroom which is the product of the roomWidth * roomLength
       public double calculateArea() //No arg method for area
       {
          return roomLength * roomWidth;
       }
       
+      //@return null
        public String caculateShadeBrightness(){
          switch(getShadeAmount()){
                case 1: return "Little";
@@ -99,7 +111,7 @@ public class Room
          return null;
       }
 
-         
+      //@return The final cooling capacity  
       public double calculateCoolingCapacity(){
       
          double coolingCapacity = 0;
