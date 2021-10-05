@@ -1,13 +1,17 @@
 import java.util.Scanner;
+import java.io.*;
+import java.util.ArrayList;
 
 public class Project_Aimy_Kohli
 
 { 
-   public static void main(String args[])
+   public static void main(String args[]) throws IOException
    {
    //Variables
       //Objects
-      Scanner keyboard = new Scanner(System.in);
+      File file = new File("Rooms.txt");
+      Scanner inputFile = new Scanner(file);
+      ArrayList<Room> roomInfo = new ArrayList<Room>();
                
       String name; //room name
       double roomLength;
@@ -15,44 +19,48 @@ public class Project_Aimy_Kohli
       int shadeAmount;
       double coolingCapacity = 0;
                            
-       name = getRoomName(keyboard);
-       roomLength = getRoomLength(keyboard);
-       roomWidth = getRoomWidth(keyboard);
-       shadeAmount = getShadeAmount(keyboard);
+      
+       name = getRoomName(inputFile);
+       roomLength = getRoomLength(inputFile);
+       roomWidth = getRoomWidth(inputFile);
+       shadeAmount = getShadeAmount(inputFile);
+      
        
        Room room = new Room(name,roomLength, roomWidth, shadeAmount,coolingCapacity);
        
+       roomInfo.add(room);
+
+       for(Room roInfo: roomInfo)
+       {
        displayRoomName(room);
        displayRoomArea(room);
        displayRoomShade(room);
-       displayBtuPerHour(room);         
+       displayBtuPerHour(room);   
+       } 
+          
+      
+   }
+      
+      private static String getRoomName(Scanner inputFile){
+         
+         return inputFile.nextLine();
       }
       
-      
-      private static String getRoomName(Scanner keyboard){
-         System.out.print("\nPlease enter the name of the room: ");
-         return keyboard.nextLine();
+      private static double getRoomLength(Scanner inputFile){
+          
+          return inputFile.nextDouble();  
       }
       
-      private static double getRoomLength(Scanner keyboard){
-          System.out.print("\nPlease enter the length of the room (in feet): ");
-          return keyboard.nextDouble();  
+      private static double getRoomWidth(Scanner inputFile){
+           
+      return inputFile.nextDouble();
       }
       
-      private static double getRoomWidth(Scanner keyboard){
-           System.out.print("\nPlease enter the width of the room (in feet): ");
-      return keyboard.nextDouble();
+      private static int getShadeAmount(Scanner inputFile){
+        
+      return inputFile.nextInt();
       }
       
-      private static int getShadeAmount(Scanner keyboard){
-        System.out.print("\nWhat is the amount of shade that this room receives?\n"
-                        + "\n\t1.Little Shade"
-                        + "\n\t2.Moderate Shade"
-                        + "\n\t3.Abundant Shade\n");
-
-      System.out.print("\nPlease select from the options above: ");
-      return keyboard.nextInt();
-      }
       
       private static void displayRoomName(Room room){
           System.out.print("\nRoom Name: "

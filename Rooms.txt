@@ -1,16 +1,16 @@
 Master Bedroom
-12
-24
-Little
+12.0
+24.2
+1
 Guest Bedroom
-15
-30
-Little
+15.5
+30.8
+2
 Children's Bedroom
-40
-20
-Moderate
+40.5
+20.8
+2
 Children's Bedroom
-34
-17
-Abundant
+34.9
+17.9
+3
