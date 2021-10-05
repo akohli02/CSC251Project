@@ -117,7 +117,7 @@ public class Room
          double coolingCapacity = 0;
          double area = calculateArea();
 
-         if ( area < 250){
+         if (  area < 250){
              coolingCapacity = 5500;
          }
          else if (area >= 250 && area <= 500){

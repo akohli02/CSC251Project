@@ -1,0 +1,16 @@
+Master Bedroom
+12
+24
+Little
+Guest Bedroom
+15
+30
+Little
+Children's Bedroom
+40
+20
+Moderate
+Children's Bedroom
+34
+17
+Abundant
