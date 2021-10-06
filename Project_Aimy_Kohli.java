@@ -11,7 +11,7 @@ public class Project_Aimy_Kohli
       //Objects
       File file = new File("Rooms.txt");
       Scanner inputFile = new Scanner(file);
-      ArrayList<Room> roomInfo = new ArrayList<Room>();
+      ArrayList<Room> rooms = new ArrayList<Room>();
                
       String name; //room name
       double roomLength;
@@ -19,25 +19,30 @@ public class Project_Aimy_Kohli
       int shadeAmount;
       double coolingCapacity = 0;
                            
-      
+      while(inputFile.hasNext())
+      {
        name = getRoomName(inputFile);
        roomLength = getRoomLength(inputFile);
        roomWidth = getRoomWidth(inputFile);
        shadeAmount = getShadeAmount(inputFile);
+       inputFile.nextLine();
       
-       
        Room room = new Room(name,roomLength, roomWidth, shadeAmount,coolingCapacity);
        
-       roomInfo.add(room);
-
-       for(Room roInfo: roomInfo)
+       rooms.add(room);
+       }     
+       
+      inputFile.close();
+      
+      
+       for(Room room: rooms)
        {
        displayRoomName(room);
        displayRoomArea(room);
        displayRoomShade(room);
        displayBtuPerHour(room);   
        } 
-          
+
       
    }
       

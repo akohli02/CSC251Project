@@ -3,7 +3,7 @@ Master Bedroom
 24.2
 1
 Guest Bedroom
-15.5
+15.0
 30.8
 2
 Children's Bedroom
