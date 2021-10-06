@@ -66,7 +66,6 @@ public class Project_Aimy_Kohli
       return inputFile.nextInt();
       }
       
-      
       private static void displayRoomName(Room room){
           System.out.print("\nRoom Name: "
                            + room.getName());
