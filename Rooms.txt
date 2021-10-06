@@ -1,0 +1,16 @@
+Master Bedroom
+12.0
+24.2
+1
+Guest Bedroom
+15.0
+30.8
+2
+Children's Bedroom
+40.5
+20.8
+2
+Children's Bedroom
+34.9
+17.9
+3
