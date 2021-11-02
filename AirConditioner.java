@@ -26,6 +26,14 @@ public class AirConditioner
          this.coolingCapacity = coolingCapacity;
       }
       
+       public AirConditioner( AirConditioner obj)
+      {
+         this.manufacturer = obj.manufacturer;
+         this.type = obj.type;
+         this.coolingCapacity = obj.coolingCapacity;
+      }
+
+      
    //Mutators
       public void setManufacturer( String manufacturer)
       {
