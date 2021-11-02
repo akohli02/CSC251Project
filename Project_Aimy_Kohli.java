@@ -13,7 +13,7 @@ public class Project_Aimy_Kohli
       Scanner inputFile = new Scanner(file);
       ArrayList<Room> rooms = new ArrayList<Room>();
                
-      String name; //room name
+      String name; 
       double roomLength;
       double roomWidth;
       int shadeAmount;
@@ -56,9 +56,9 @@ public class Project_Aimy_Kohli
        displayBtuPerHour(room);   
        */
        } 
-
-      
    }
+   
+   //Methods to get Room and AC info from file
       
       private static String getRoomName(Scanner inputFile){
          
