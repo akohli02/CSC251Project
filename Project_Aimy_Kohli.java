@@ -30,6 +30,7 @@ public class Project_Aimy_Kohli
        shadeAmount = getShadeAmount(inputFile);
        
        inputFile.nextLine();
+       
        manufacturer = getManufacturer(inputFile);
        type = getType(inputFile);
        acCoolingCapacity = getAcCoolingCapacity(inputFile);
@@ -93,8 +94,6 @@ public class Project_Aimy_Kohli
            
       return inputFile.nextDouble();
       }
-      
-      
       
       
       /**
