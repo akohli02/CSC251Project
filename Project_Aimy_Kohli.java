@@ -48,13 +48,7 @@ public class Project_Aimy_Kohli
       
        for(Room room: rooms)
        {
-       System.out.print(room);
-       /**
-       displayRoomName(room);
-       displayRoomArea(room);
-       displayRoomShade(room);
-       displayBtuPerHour(room);   
-       */
+         System.out.print(room);
        } 
    }
    
@@ -95,26 +89,4 @@ public class Project_Aimy_Kohli
       return inputFile.nextDouble();
       }
       
-      
-      /**
-      private static void displayRoomName(Room room){
-          System.out.print("\nRoom Name: "
-                           + room.getName());
-      }
-      
-      private static void displayRoomArea(Room room){      
-         System.out.print("\nRoom Area (in square feet): "
-                           + room.calculateArea()); 
-      
-      }
-      
-      private static void displayRoomShade(Room room){
-          System.out.print("\nAmount of Shade: " + room.caculateShadeBrightness());      
-      }
-      
-      private static void displayBtuPerHour(Room room){
-         System.out.printf("\nBTUs Per Hour needed: %.2f", room.calculateCoolingCapacity());                    
-       }
-       */
-          
 }
