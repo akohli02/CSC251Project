@@ -7,6 +7,7 @@ public class Room
       private double roomWidth;
       private int shadeAmount;
       private double coolingCapacity;
+      private AirConditioner airConditioner;
       
       //No arg constructor
       public Room ()
@@ -23,13 +24,14 @@ public class Room
       @param coolCap The cooling capacity
       */
       
-      public Room (String nam, double roLength, double roWidth, int shaAmount, double coolCap)
+      public Room (String nam, double roLength, double roWidth, int shaAmount, double coolCap, AirConditioner air)
       {
          name = nam;
          roomLength = roLength;
          roomWidth = roWidth;
          shadeAmount = shaAmount;
          coolingCapacity = coolCap;
+         airConditioner = new AirConditioner(air);
       }
       
          //Mutator/ Setter methods for fields
@@ -57,6 +59,12 @@ public class Room
       {
          coolingCapacity = coolCap;
       }
+      
+      public void setAirConditioner(AirConditioner air)
+      {
+         airConditioner = new AirConditioner(air);
+      }
+
                   
    //Accessor/ Getter methods
       public String getName()
@@ -88,6 +96,12 @@ public class Room
       {
          return roomLength * roomWidth;
       }
+      
+      public AirConditioner getAirConditioner()
+      {
+         return new AirConditioner(airConditioner);
+      }
+
       
        public String caculateShadeBrightness(){
          switch(getShadeAmount()){
@@ -128,6 +142,50 @@ public class Room
          return coolingCapacity;
       }
   
+
+   }
+   
+   public boolean hasCoolingCapacity()
+   {
+      boolean adequateCooling;
+      
+      
+      if(coolingCapacity > airConditioner.getCoolingCapacity())
+      {
+         adequateCooling = true;
+      }
+      
+      else
+      {
+         adequateCooling = false;
+      }
+      
+      return adequateCooling;
+   }
+   
+   public String toString()
+   {
+      String roomCool;
+      
+      if(hasCoolingCapacity() ==true )
+      {
+         roomCool = "\nThis room is adequately cooled."; 
+      }
+      
+      else
+      {
+         roomCool = "\nThis room is not adequately cooled.";
+      }
+      
+      String str = "\nRoom Name: " + getName() 
+                   +"\nRoom Area (in square feet): " + calculateArea()
+                   +"\nAmount of Shade: " + caculateShadeBrightness()
+                   +"\nBTUs Per Hour needed: " + calculateCoolingCapacity()  
+                   + airConditioner.toString()
+                   
+                   + roomCool;
+                  
+      return str;            
 
    }
 

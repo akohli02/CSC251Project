@@ -1,0 +1,28 @@
+Master Bedroom
+10.0
+15.5
+3
+GE
+Portable
+8000.0
+Master Bedroom
+40.0
+6.5
+2
+Frigidaire
+Portable
+8000.0
+Living Room
+50.0
+15.0
+1
+Whirlpool
+Window Mounted
+18000.0
+Kitchen
+8.0
+30.0
+2
+GE
+Window Mounted
+6000.0
