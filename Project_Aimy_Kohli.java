@@ -48,7 +48,7 @@ public class Project_Aimy_Kohli
       
        for(Room room: rooms)
        {
-       room.toString();
+       System.out.print(room);
        /**
        displayRoomName(room);
        displayRoomArea(room);

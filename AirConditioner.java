@@ -68,7 +68,7 @@ public class AirConditioner
 
       public String toString()
       {
-         String str = "Air Conditioner Manufacturer: " + manufacturer
+         String str = "\nAir Conditioner Manufacturer: " + manufacturer
                        + "\nAir Conditioner Type: " + type
                        + "\nAir Conditioner Cooling Capacity (BTUs Per Hour): " + coolingCapacity;
          return str;
