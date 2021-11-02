@@ -161,6 +161,20 @@ public class Room
       
       return adequateCooling;
    }
+   
+   public String toString()
+   {
+      String str = "\nRoom Name: " + getName() 
+                   +"\nRoom Area (in square feet): " + calculateArea()
+                   +"\nAmount of Shade: " + caculateShadeBrightness()
+                   +"\nBTUs Per Hour needed: " + calculateCoolingCapacity()  
+                   +"Air Conditioner Manufacturer: " + airConditioner.getManufacturer()
+                   +"Air Conditioner Type: " + airConditioner.getType()
+                   +"Air Conditioner Cooling Capacity (BTUs Per Hour): " + airConditioner.getCoolingCapacity();
+                  
+      return str;            
+
+   }
 
                                   
 }
