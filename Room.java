@@ -167,7 +167,7 @@ public class Room
    {
       String roomCool;
       
-      if(hasCoolingCapacity()==true )
+      if(hasCoolingCapacity() ==true )
       {
          roomCool = "\nThis room is adequately cooled."; 
       }
