@@ -74,9 +74,12 @@ public class Project_Aimy_Kohli
       return inputFile.nextInt();
       }
       
+
       private static String getManufacturer(Scanner inputFile){
            
       return inputFile.nextLine();
+
+      
       }
       
       private static String getType(Scanner inputFile){
