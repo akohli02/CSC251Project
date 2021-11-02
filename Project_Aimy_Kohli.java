@@ -9,7 +9,7 @@ public class Project_Aimy_Kohli
    {
    //Variables
       //Objects
-      File file = new File("Rooms.txt");
+      File file = new File("Rooms2.txt");
       Scanner inputFile = new Scanner(file);
       ArrayList<Room> rooms = new ArrayList<Room>();
                
@@ -18,6 +18,9 @@ public class Project_Aimy_Kohli
       double roomWidth;
       int shadeAmount;
       double coolingCapacity = 0;
+      String manufacturer;
+      String type;
+      double acCoolingCapacity = 0;
                            
       while(inputFile.hasNext())
       {
@@ -25,9 +28,16 @@ public class Project_Aimy_Kohli
        roomLength = getRoomLength(inputFile);
        roomWidth = getRoomWidth(inputFile);
        shadeAmount = getShadeAmount(inputFile);
+       
+       inputFile.nextLine();
+       manufacturer = getManufacturer(inputFile);
+       type = getType(inputFile);
+       acCoolingCapacity = getAcCoolingCapacity(inputFile);
+
        inputFile.nextLine();
       
-       Room room = new Room(name,roomLength, roomWidth, shadeAmount,coolingCapacity);
+       AirConditioner airConditioner = new AirConditioner(manufacturer, type, acCoolingCapacity);
+       Room room = new Room(name,roomLength, roomWidth, shadeAmount,coolingCapacity, airConditioner);
        
        rooms.add(room);
        }     
@@ -37,10 +47,13 @@ public class Project_Aimy_Kohli
       
        for(Room room: rooms)
        {
+       room.toString();
+       /**
        displayRoomName(room);
        displayRoomArea(room);
        displayRoomShade(room);
        displayBtuPerHour(room);   
+       */
        } 
 
       
@@ -66,7 +79,25 @@ public class Project_Aimy_Kohli
       return inputFile.nextInt();
       }
       
+      private static String getManufacturer(Scanner inputFile){
+           
+      return inputFile.nextLine();
+      }
       
+      private static String getType(Scanner inputFile){
+           
+      return inputFile.nextLine();
+      }
+      
+      private static double getAcCoolingCapacity(Scanner inputFile){
+           
+      return inputFile.nextDouble();
+      }
+      
+      
+      
+      
+      /**
       private static void displayRoomName(Room room){
           System.out.print("\nRoom Name: "
                            + room.getName());
@@ -85,5 +116,6 @@ public class Project_Aimy_Kohli
       private static void displayBtuPerHour(Room room){
          System.out.printf("\nBTUs Per Hour needed: %.2f", room.calculateCoolingCapacity());                    
        }
+       */
           
 }

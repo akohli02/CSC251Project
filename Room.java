@@ -168,9 +168,7 @@ public class Room
                    +"\nRoom Area (in square feet): " + calculateArea()
                    +"\nAmount of Shade: " + caculateShadeBrightness()
                    +"\nBTUs Per Hour needed: " + calculateCoolingCapacity()  
-                   +"Air Conditioner Manufacturer: " + airConditioner.getManufacturer()
-                   +"Air Conditioner Type: " + airConditioner.getType()
-                   +"Air Conditioner Cooling Capacity (BTUs Per Hour): " + airConditioner.getCoolingCapacity();
+                   + airConditioner.toString();
                   
       return str;            
 
